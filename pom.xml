@@ -8,9 +8,9 @@
     <packaging>pom</packaging>
 
     <name>academia</name>
-    <!--modules>
+    <modules>
         <module>academia-rest</module>
-    </modules-->
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
