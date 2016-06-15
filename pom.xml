@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
         <maven-coveralls-plugin.version>4.2.0</maven-coveralls-plugin.version>
-        <!--maven-jacoco-plugin.version></maven-jacoco-plugin.version-->
+        <maven-jacoco-plugin.version>0.7.6.201602180812</maven-jacoco-plugin.version>
     </properties>
 
     <build>
@@ -27,11 +27,19 @@
                     <artifactId>coveralls-maven-plugin</artifactId>
                     <version>${maven-coveralls-plugin.version}</version>
                 </plugin>
-                <!--plugin>
+                <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
                     <version>${maven-jacoco-plugin.version}</version>
-                </plugin-->
+                    <executions>
+                        <execution>
+                            <id>prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
