@@ -9,6 +9,7 @@
 
     <name>academia</name>
     <modules>
+        <module>academia-servicio</module>
         <module>academia-rest</module>
     </modules>
 
@@ -17,6 +18,7 @@
         <junit.version>4.12</junit.version>
         <maven-coveralls-plugin.version>4.2.0</maven-coveralls-plugin.version>
         <maven-jacoco-plugin.version>0.7.6.201602180812</maven-jacoco-plugin.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
     </properties>
 
     <build>
@@ -44,14 +46,17 @@
         </pluginManagement>
     </build>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
